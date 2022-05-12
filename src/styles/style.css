@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 1100px;
+  margin: auto;
+}
+
+.wrapper-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 44.44444%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.left {
+  padding: 20px 0 40px 0;
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.left .logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 128px;
+}
+
+.left .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.left .login .hightxt {
+  margin-bottom: 16px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.left .login .hightxt p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.left .login .jsttxt {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #545563;
+  margin-bottom: 32px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.left .login .chkbx {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2b2b43;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.left .login .chkbx input {
+  border: 1px solid #c7c8d2;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.left .login .chkbx p {
+  padding-left: 12px;
+}
+
+.left .login .login-btn input {
+  background-color: #4e60ff;
+  width: 350px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.left .login .frg-pass {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #4e60ff;
+  margin-bottom: 94px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0;
+}
+
+.left .login .frg-pass a {
+  text-decoration: none;
+}
+
+.left .signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left .signup p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #545563;
+}
+
+.left .signup a {
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #4e60ff;
+}
+
+.inputclass {
+  margin-bottom: 28px;
+}
+
+.inputclass p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #545563;
+}
+
+.inputclass input {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #83859c;
+  border-radius: 5px;
+  border: 1px solid #c7c8d2;
+  width: 336px;
+  height: 44px;
+  padding-left: 12px;
+}
+
+.wrapper-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 55.55556%;
+  background-color: #697bff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.right .ad img {
+  max-width: 100%;
+}
+
+.right .text {
+  max-width: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right .text .hightxt p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+}
+
+.right .text .jsttxt p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.right .text .slider {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.right .text .slider .slideme {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-left: 8px;
+  opacity: 50%;
+}
+
+.right .text .slider .slideme:hover {
+  opacity: 100%;
+}
+/*# sourceMappingURL=style.css.map */

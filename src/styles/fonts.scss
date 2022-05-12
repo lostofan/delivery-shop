@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Roboto:wght@400;700&display=swap');
+
+@mixin ffa($ff, $fw, $fs) {
+  font-family: $ff, sans-serif;
+  font-weight: $fw;
+  font-size: $fs;
+}
+
+$inpcol: #83859c;
+$logcol: #545563;
+$logocol: #2b2b43;
+$blucol: #4e60ff;
+$bordcol: #c7c8d2;
+$bgcol: #697bff;
+$btnblu: #f3f4ff;
+$nu: 'Nunito';
+$ro: 'Roboto';

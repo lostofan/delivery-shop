@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import 'fonts.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 1100px;
+  margin: auto;
+}
+.wrapper-left {
+  display: flex;
+  flex-direction: row;
+  width: (640 / (1440 / 100%));
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+.left {
+  padding: 20px 0 40px 0;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  .logo {
+    align-self: flex-start;
+    margin-bottom: 128px;
+  }
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .hightxt {
+      margin-bottom: 16px;
+      align-self: flex-start;
+      p {
+        @include ffa($nu, 700, 60px);
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .jsttxt {
+      @include ffa($nu, 400, 14px);
+      color: $logcol;
+      margin-bottom: 32px;
+      align-self: flex-start;
+    }
+    .chkbx {
+      @include ffa($nu, 400, 14px);
+      color: $logocol;
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      align-self: flex-start;
+      input {
+        border: 1px solid #c7c8d2;
+        border-radius: 5px;
+        width: 20px;
+        height: 20px;
+      }
+      p {
+        padding-left: 12px;
+      }
+    }
+    .login-btn {
+      input {
+        background-color: $blucol;
+        width: 350px;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        padding: 12px 16px;
+        margin-bottom: 16px;
+        @include ffa($nu, 700, 14px);
+      }
+    }
+    .frg-pass {
+      @include ffa($nu, 700, 14px);
+      color: $blucol;
+      margin-bottom: 94px;
+      align-self: center;
+      padding: 0;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .signup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    p {
+      @include ffa($nu, 400, 14px);
+      color: $logcol;
+    }
+    a {
+      text-decoration: none;
+      @include ffa($nu, 700, 14px);
+      color: $blucol;
+    }
+  }
+}
+.inputclass {
+  margin-bottom: 28px;
+  p {
+    @include ffa($nu, 600, 12px);
+    color: $logcol;
+  }
+  input {
+    align-self: flex-end;
+    @include ffa($nu, 400, 14px);
+    color: $inpcol;
+    border-radius: 5px;
+    border: 1px solid $bordcol;
+    width: 336px;
+    height: 44px;
+    padding-left: 12px;
+  }
+}
+.wrapper-right {
+  display: flex;
+  width: (800 / (1440 / 100%));
+  background-color: $bgcol;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .ad {
+    img {
+      max-width: 100%;
+    }
+  }
+  .text {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hightxt {
+      p {
+        @include ffa($nu, 700, 32px);
+        color: #fff;
+      }
+    }
+    .jsttxt {
+      p {
+        @include ffa($nu, 400, 14px);
+        color: #fff;
+        text-align: center;
+      }
+    }
+    .slider {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: row;
+      .slideme {
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        border-radius: 4px;
+        margin-left: 8px;
+        opacity: 50%;
+        &:hover {
+          opacity: 100%;
+        }
+      }
+    }
+  }
+}
