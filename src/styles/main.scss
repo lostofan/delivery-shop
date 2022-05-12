@@ -117,14 +117,20 @@
     justify-content: center;
     align-items: center;
     cursor: url('../imgs/Group.png'), auto;
+    color: $logcol;
+    user-select: none;
     img {
       width: 24px;
       height: 24px;
     }
     p {
       @include ffa($nu, 700, 13px);
-      color: $logcol;
     }
+  }
+  .main__ingridients_block_clicked {
+    outline: 3px solid #4e60ff;
+    color: #4e60ff;
+    background-color: #f3f4ff;
   }
 }
 
@@ -152,6 +158,7 @@
       margin-bottom: 30px;
       position: relative;
       overflow: hidden;
+      user-select: none;
       .restaurant__block_featured {
         position: absolute;
         right: 0;
@@ -203,23 +210,28 @@
             color: $inpcol;
           }
         }
-        .restaurant__block_type {
-          width: 70px;
-          height: 24px;
-          background-color: #edeef2;
-          border-radius: 25px;
+        .wrapper__restaurant_type {
           display: flex;
           flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          img {
-            width: 14px;
-            height: 14px;
-            margin-right: 8px;
-          }
-          p {
-            @include ffa($nu, 600, 12px);
-            color: $logcol;
+          .restaurant__block_type {
+            margin-right: 15px;
+            width: 70px;
+            height: 24px;
+            background-color: #edeef2;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 14px;
+              height: 14px;
+              margin-right: 8px;
+            }
+            p {
+              @include ffa($nu, 600, 12px);
+              color: $logcol;
+            }
           }
         }
       }
@@ -229,7 +241,7 @@
 .restaurant__img_bag {
   position: relative;
 }
-.geek {
+.bag__popup {
   position: absolute;
   display: flex;
   justify-content: center;

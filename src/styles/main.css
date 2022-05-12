@@ -204,6 +204,11 @@
       -ms-flex-align: center;
           align-items: center;
   cursor: url("../imgs/Group.png"), auto;
+  color: #545563;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .main__ingridients .main__ingridients_block img {
@@ -215,7 +220,12 @@
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 13px;
-  color: #545563;
+}
+
+.main__ingridients .main__ingridients_block_clicked {
+  outline: 3px solid #4e60ff;
+  color: #4e60ff;
+  background-color: #f3f4ff;
 }
 
 .main__restaurant {
@@ -263,6 +273,10 @@
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .main__restaurant .wrapper__main_restaurant .main__restaurant__block .restaurant__block_featured {
@@ -354,7 +368,18 @@
   color: #83859c;
 }
 
-.main__restaurant .wrapper__main_restaurant .main__restaurant__block .wrapper__restaurant_txt .restaurant__block_type {
+.main__restaurant .wrapper__main_restaurant .main__restaurant__block .wrapper__restaurant_txt .wrapper__restaurant_type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main__restaurant .wrapper__main_restaurant .main__restaurant__block .wrapper__restaurant_txt .wrapper__restaurant_type .restaurant__block_type {
+  margin-right: 15px;
   width: 70px;
   height: 24px;
   background-color: #edeef2;
@@ -374,13 +399,13 @@
           justify-content: center;
 }
 
-.main__restaurant .wrapper__main_restaurant .main__restaurant__block .wrapper__restaurant_txt .restaurant__block_type img {
+.main__restaurant .wrapper__main_restaurant .main__restaurant__block .wrapper__restaurant_txt .wrapper__restaurant_type .restaurant__block_type img {
   width: 14px;
   height: 14px;
   margin-right: 8px;
 }
 
-.main__restaurant .wrapper__main_restaurant .main__restaurant__block .wrapper__restaurant_txt .restaurant__block_type p {
+.main__restaurant .wrapper__main_restaurant .main__restaurant__block .wrapper__restaurant_txt .wrapper__restaurant_type .restaurant__block_type p {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 12px;
@@ -391,7 +416,7 @@
   position: relative;
 }
 
-.geek {
+.bag__popup {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
