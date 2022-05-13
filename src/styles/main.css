@@ -444,8 +444,11 @@
 
 .cross_line {
   height: 1px;
-  width: 1980vw;
-  margin-left: -30vw;
+  width: 1980px;
+  margin-left: -10vw;
   background-color: #edeef2;
+  position: absolute;
+  top: 81px;
+  right: 00px;
 }
 /*# sourceMappingURL=main.css.map */

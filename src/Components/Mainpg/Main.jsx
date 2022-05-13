@@ -52,22 +52,6 @@ return getResult(arrayNums, unclick);
      } else {
       b.map((item) => document.querySelector(String('#restaurant__block_'+item)).style.display = "flex");
      }
-     
-
-/*      for (let x = 0; x < b.length; x++ ) {
-       
-      for (let y = 0; y < result.length; y++) {
-        console.log(y);
-        // eslint-disable-next-line eqeqeq ИДШНИКИ!!!!
-        if ( x == result[y]) { if ( unclick === true) {
-          block[x].style.display = "none";
-          console.log(x+"minus"+result[y]);
-        } else {block[x].style.display = "flex";}
-        console.log(x+"minus"+result[y]);
-
-        }
-      }
-     } */
    }
 
   const kitchenArray = [

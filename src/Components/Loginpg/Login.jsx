@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import logo from './../../imgs/main.png';
 
 export default function Login() {
@@ -30,7 +31,7 @@ export default function Login() {
             <input type="button" value="Login"/>
         </div>
         <div className="frg-pass">
-            <a href="/frg">Forgot password</a>
+            <NavLink to="/frg">Forgot password</NavLink>
         </div>
     </div>
     <div className="signup">
