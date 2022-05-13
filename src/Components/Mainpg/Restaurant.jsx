@@ -10,14 +10,14 @@ const [buycount, setBuycount] = useState(1);
 const addFood = (event) => {
     setStyle('bag.png');
     setBuycount(buycount + 1);
-    let newshit = document.createElement('div');
-    newshit.className = 'bag__popup';
-    newshit.innerHTML = buycount;
-    event.target.parentNode.append(newshit);
+    const baganim = document.createElement('div');
+    baganim.className = 'bag__popup';
+    baganim.innerHTML = buycount;
+    event.target.parentNode.append(baganim);
 }
 
   return (    
-    <div className="main__restaurant__block">
+    <div className="main__restaurant__block" id={"restaurant__block_"+props.id}>
         { props.featured && (<div className="restaurant__block_featured">FEATURED</div>)}
         <div className="restaurant__block_img"><img src={require(`../../imgs/${props.pic}.png`)} alt="" draggable="false" /></div>
         <div className="wrapper__restaurant_txt">
