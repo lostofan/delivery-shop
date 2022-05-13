@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '../../imgs/main.png'
 import Avatar from '../../imgs/main avatar.png'
 import Basket from '../../imgs/bag.png';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -24,7 +25,7 @@ export default function Header() {
           <img src={Basket} alt="" />
         </div>
         <div className="header__avatar">
-          <img src={Avatar} alt="" />
+          <NavLink to="/settings"><img src={Avatar} alt="" /></NavLink>
         </div>
         </div>
     </header>

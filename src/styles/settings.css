@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Roboto:wght@400;700&display=swap");
+.settings__block_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 16px;
+}
+
+.settings__block_wrapper .settings__menu_article {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #2b2b43;
+  margin-bottom: 16px;
+}
+
+.settings__block_wrapper .change_article {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #545563;
+}
+
+.settings__menu .settings__menu_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  height: 324px;
+}
+
+.settings__menu .settings__menu_wrapper .menu__elem_wrapper {
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  outline: 1px solid #edeef2;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings__menu .settings__menu_wrapper .menu__elem_wrapper .menu__elem_img {
+  width: 40px;
+  height: 40px;
+  background-color: #edeef2;
+  border-radius: 10px;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings__menu .settings__menu_wrapper .menu__elem_wrapper .menu__elem_txt {
+  margin-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.settings__menu .settings__menu_wrapper .menu__elem_wrapper .menu__elem_txt p:first-child {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2b2b43;
+  display: inline;
+}
+
+.settings__menu .settings__menu_wrapper .menu__elem_wrapper .menu__elem_txt p:last-child {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #545563;
+}
+
+.settings__change .settings__change_wrapper {
+  outline: 1px solid #edeef2;
+  width: 730px;
+  border-radius: 15px;
+}
+
+.settings__change .settings__change_wrapper .settings__change_block {
+  padding: 24px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.settings__change .settings__change_wrapper .settings__change_block .settings__change_article {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2b2b43;
+  margin-bottom: 16px;
+}
+
+.settings__change .settings__change_wrapper .settings__change_block .change__avatar_block .avatar__block_article {
+  margin-bottom: 8px;
+}
+
+.settings__change .settings__change_wrapper .settings__change_block .change__avatar_block .avatar__block_ui {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings__change .settings__change_wrapper .settings__change_block .change__avatar_block .avatar__block_ui img {
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.settings__change .settings__change_wrapper .settings__change_block .change__avatar_block .avatar__block_ui button {
+  margin-right: 16px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  width: 84px;
+  height: 44px;
+}
+
+.settings__change .settings__change_wrapper .settings__change_block .change__avatar_block .avatar__block_ui .avatar__ui_change {
+  color: #4e60ff;
+  outline: 1px solid #4e60ff;
+  border-radius: 10px;
+}
+
+.settings__change .settings__change_wrapper .settings__change_block .change__avatar_block .avatar__block_ui .avatar__ui_remove {
+  color: #83859c;
+}
+
+.change__bio_block {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.change__bio_block .change__bio_inputs input {
+  margin-bottom: 32px;
+  width: 317px;
+  border-radius: 10px;
+  outline: 1px solid #edeef2;
+  color: #2b2b43;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px;
+}
+/*# sourceMappingURL=settings.css.map */
