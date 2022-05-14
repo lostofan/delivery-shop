@@ -1,6 +1,6 @@
 import React from 'react'
 import Menuelem from './Menuelem'
-import Avatar from '../../imgs/ava.png'
+import Personal from './Personal'
 
 export default function Settings() {
   return (
@@ -18,34 +18,12 @@ export default function Settings() {
         <p className="settings__menu_article">Account</p>
         <div className="settings__change_wrapper">
         <div className="settings__change_block">
-            <div className="settings__change_article">
-                <p>Personal information</p>
-            </div>
-            <div className="change__avatar_block">
-                <div className="avatar__block_article change_article">Avatar</div>
-                <div className="avatar__block_ui">
-                    <img src={Avatar} alt="" />
-                    <button className="avatar__ui_change"><p>Change</p></button>
-                    <button className="avatar__ui_remove"><p>Remove</p></button>
-                </div>
-            </div>
-            <div className="change__bio_block">
-                <div className="change__bio_inputs">
-                <div className="change__bio_article change_article">First name</div>
-                <input type="text" name="name" id="" placeholder="Jane" />
-                </div>
-                <div className="change__bio_inputs">
-                <div className="change__bio_article change_article">Last name</div>
-                <input type="text" name="name" id="" placeholder="Robertson" />
-                </div>
-                <div className="change__bio_inputs">
-                <div className="change__bio_article change_article">Email</div>
-                <input type="text" name="name" id="" placeholder="jane.robertson@example.com" />
-                </div>
-                <div className="change__bio_inputs">
-                <div className="change__bio_article change_article">Phone number</div>
-                <input type="text" name="name" id="" placeholder="(217) 555-0113" />
-                </div>
+                <p className="settings__change_article">Personal information</p>
+            <Personal/>
+            <div className="change__buttons_wrapper">
+                <div className="left__buttons"><button className="logout_btn">Log out</button></div>
+                <div className="right__buttons"><button className="btn_inactive">Discard changes</button>
+                <button className="btn_active">Save changes</button></div>
             </div>
         </div>
         </div>
