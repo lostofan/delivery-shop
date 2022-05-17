@@ -452,7 +452,27 @@
   right: 00px;
 }
 
-.wrapper__main_restaurant div.hideshit {
+.hideshit_bbq {
+  display: none !important;
+}
+
+.hideshit_burger {
+  display: none !important;
+}
+
+.hideshit_pizza {
+  display: none !important;
+}
+
+.hideshit_sushi {
+  display: none !important;
+}
+
+.hideshit_vegan {
+  display: none !important;
+}
+
+.hideshit_desserts {
   display: none !important;
 }
 /*# sourceMappingURL=main.css.map */

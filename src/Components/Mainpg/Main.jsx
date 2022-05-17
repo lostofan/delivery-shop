@@ -6,84 +6,68 @@ import Restaurant from './Restaurant'
 export default function Main() {
   //Рисует нажатие, записывает состояние нажатой/отжатой кнопки
   const useStyle = (event, blockClick, setBlockClick, cache) => {
+    if (cache["bbq"].length === 0) {
+      fillCache(cache);
+    }
+    
     if (blockClick === false) {
       setBlockClick(true);
       event.currentTarget.classList.add("main__ingridients_block_clicked");
-      getIngridientName(event, true, cache);
     }
     else {
       setBlockClick(false);
       event.currentTarget.classList.remove("main__ingridients_block_clicked");
-      getIngridientName(event, false, cache);
     }
+    console.log(cache[event.currentTarget.lastChild.innerHTML.toLowerCase()]);
+    return newfn( 
+    invertNumbers(cache[event.currentTarget.lastChild.innerHTML.toLowerCase()], getBlocksNumber()),
+    event.currentTarget.lastChild.innerHTML.toLowerCase(),
+    blockClick
+    )
   }
-  //Записывает название ингридиента нажатой кнопки
-  const getIngridientName = (event, unclick, cache) => {
-    let cached;
-    for (let key in cache) {
-      if (key === event.currentTarget.lastChild.innerHTML.toLowerCase() ) {
-        cached = cache[key];
-      } 
+  const getBlocksNumber = () => {
+    let arr = [];
+    for(let x = 0; x < document.querySelectorAll(".main__restaurant__block").length; x++) {
+      arr.push(x);
     }
-    compareIngridients(
-      event.currentTarget.lastChild.innerHTML.toLowerCase(),
-      unclick,
-      cached, cache
-    );
+    return arr;
   }
-  //Записывает расположение ресторанов на основе нажатой иконки
-  const compareIngridients = (result, unclick, cache, sec) => {
-    const arrayNums = [];
-      for (let x = 0; x < kitchenArray.length; x++) {
-        for (let y = 0; y < kitchenArray[x].length; y++) {
-          if (kitchenArray[x][y] === result) { arrayNums.push(x); };
-        }
-      }
-
-
-    return getResult(arrayNums, unclick, cache, sec);
-  }
-  //Делает уникальными значения (для случая нескольких нажатых кнопок) 
-  const doUniq = (from, to) => {
-    const a = new Set(from);
-    const b = to.filter(c => !a.has(c));
+  //Инвертирует числа
+  const invertNumbers = (x, y) => {
+    let a = new Set(x);
+    console.log(a);
+    let b = y.filter( (c) => !a.has(c) );
+    console.log( b);
     return b;
   }
-  //Собирает айдишники ресторанных блоков
-  const getIDs = () => {
-    let block = document.querySelectorAll('.main__restaurant__block');
-    let jstarr = [];
-    jstarr.length = 0;
-    for (let x = 0; x < block.length; x++) {
-      jstarr.push(x);
+  const newfn = (arr, gut, state) => {
+    console.log(arr);
+    console.log(gut);
+    if (state === false){
+       arr.map( (item) => document.querySelector('#restaurant__block_' + item).classList.add("hideshit_"+gut) )
+    } else {
+      arr.map( (item) => document.querySelector('#restaurant__block_' + item).classList.remove("hideshit_"+gut) )
     }
-    return jstarr;
+   
   }
-  //Скрывает и отображает подходящие блоки
-  const getResult = (result, unclick, cache, sec) => {
-      const final = doUniq(result, getIDs());
-    if (unclick === true) {  
-        for (let x = 0; x < doUniq(doUniq(isHide(getIDs()), result), doUniq(isHide(getIDs()), getIDs() )).length; x++) {
-          cache.push(doUniq(doUniq(isHide(getIDs()), result), doUniq(isHide(getIDs()), getIDs() ))[x]);
-        };
-        final.map((item) => document.querySelector('#restaurant__block_' + item).classList.add("hideshit"));
-      } 
-    else {
-      cache.map((item) => document.querySelector('#restaurant__block_' + item).classList.remove("hideshit"));
-      cache.length = 0;
-      }
+
+  //Заполняет массивы номерами блоков соответствующих ингридиенту
+  const fillCache = (cache) => {
+    const elems = document.querySelectorAll(".main__ingridients_block");
+    for (let x = 0; x < elems.length; x++) {
+      compareIngridients( elems[x].lastChild.innerHTML.toLowerCase(), cache );
     }
-//Проверяет уже скрытые блоки и сообщает их номера
-  const isHide = (arr) => {
-    let dump = [];
-    dump.length = 0;
-      for (let x = 0; x < arr.length; x++) {
-        if (document.querySelector('#restaurant__block_' + arr[x]).classList.contains("hideshit") === true) {
-          dump.push(arr[x]);
+    }
+
+  //Заполняет массивы номерами блоков
+  const compareIngridients = (elem, cache) => {
+      for (let x = 0; x < kitchenArray.length; x++) {
+        for (let y = 0; y < kitchenArray[x].length; y++) {
+          if (kitchenArray[x][y] === elem) { console.log("PUSHU: "+ x + "V: "+ elem); cache[elem].push(x); };
         }
-    }
-    return dump;
+      }
   }
+
 
   const kitchenArray = [
     ["sushi"],
@@ -111,12 +95,12 @@ export default function Main() {
           <Discount num="2" name="WWW" bgcol="#FFF3ED" article="Big Burgers" sum="50% OFF" type="Foodies" />
         </div>
         <div className="main__ingridients">
-          <Ingridients myfn={useStyle} name="BBQ" link="bbq" cache={1} id="1" />
-          <Ingridients myfn={useStyle} name="Burger" link="burger" cache={2} id="2" />
-          <Ingridients myfn={useStyle} name="Pizza" link="pizza" cache={3} id="3"/>
-          <Ingridients myfn={useStyle} name="Sushi" link="sushi" cache={4} id="4" />
-          <Ingridients myfn={useStyle} name="Vegan" link="vegan" cache={5} id="5" />
-          <Ingridients myfn={useStyle} name="Desserts" link="desserts" cache={6}  id="6"/>
+          <Ingridients myfn={useStyle} name="BBQ" link="bbq" cache={1}/>
+          <Ingridients myfn={useStyle} name="Burger" link="burger" cache={2}/>
+          <Ingridients myfn={useStyle} name="Pizza" link="pizza" cache={3}/>
+          <Ingridients myfn={useStyle} name="Sushi" link="sushi" cache={4}/>
+          <Ingridients myfn={useStyle} name="Vegan" link="vegan" cache={5}/>
+          <Ingridients myfn={useStyle} name="Desserts" link="desserts" cache={6}/>
         </div>
         <div className="main__restaurant">
           <div className="main__article"><p>Nearby restaurants</p></div>
